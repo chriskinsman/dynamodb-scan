@@ -1,6 +1,6 @@
 {
   "name": "dynamodb-scan",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Scans Dynamodb and emits events",
   "main": "index.js",
   "keywords": [
@@ -9,6 +9,7 @@
     "Scan"
   ],
   "author": "Chris Kinsman",
+  "repository": "https://github.com/chriskinsman/dynamodb-scan",
   "license": "MIT",
   "dependencies": {
     "async": "^0.9.0",
