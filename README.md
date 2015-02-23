@@ -1,5 +1,6 @@
 # dynamodb-scan
 
+  [![Travis Build][travis-image]][travis-url]
   [![NPM Version][npm-image]][npm-url]
   [![NPM Downloads][downloads-image]][downloads-url]
 
@@ -93,3 +94,5 @@ The author is [Chris Kinsman](https://github.com/chriskinsman) from [PushSpring]
 [npm-url]: https://npmjs.org/package/dynamodb-scan
 [downloads-image]: https://img.shields.io/npm/dm/dynamodb-scan.svg?style=flat
 [downloads-url]: https://npmjs.org/package/dynamodb-scan
+[travis-image]: https://img.shields.io/travis/chriskinsman/dynamodb-scan.svg
+[travis-url]: https://travis-ci.org/chriskinsman/dynamodb-scan
