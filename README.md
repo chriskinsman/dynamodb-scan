@@ -82,6 +82,11 @@ Pauses a scan.  Events may still be emitted from the previous scan operation.
 
 Resumes a paused scan.
 
+### paused()
+
+Returns true if emitter is paused
+
+
 ## People
 
 The author is [Chris Kinsman](https://github.com/chriskinsman) from [PushSpring](http://www.pushspring.com)

@@ -68,7 +68,6 @@ function DynamoDbScan(awsAccessKeyId, awsSecretAccessKey, awsRegion, table, opti
                     });
                 }
                 else {
-                    console.info("Paused");
                     return setTimeout(done, 1000);
                 }
             },
@@ -98,13 +97,15 @@ function DynamoDbScan(awsAccessKeyId, awsSecretAccessKey, awsRegion, table, opti
     };
 
     this.pause = function() {
-        console.info("Pausing");
         _paused = true;
     };
 
     this.resume = function() {
-        console.info("Resuming");
         _paused = false;
+    };
+
+    this.paused = function() {
+        return _paused;
     };
 
     return (this);
