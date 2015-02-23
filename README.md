@@ -1,5 +1,8 @@
 # dynamodb-scan
 
+  [![NPM Version][npm-image]][npm-url]
+  [![NPM Downloads][downloads-image]][downloads-url]
+
 EventEmitter to simplify dynamodb parallel scans
 
 ## Features
