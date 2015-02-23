@@ -1,4 +1,4 @@
-# DynamoDbScan
+# dynamodb-scan
 
 EventEmitter to simplify dynamodb parallel scans
 
@@ -11,7 +11,7 @@ EventEmitter to simplify dynamodb parallel scans
 ## Installation
 
 ``` bash
-  $ npm install DynamoDbScan --save
+  $ npm install dynamodb-scan --save
 ```
 
 ## Usage
@@ -19,33 +19,33 @@ EventEmitter to simplify dynamodb parallel scans
 ```js
 'use strict';
 
-var DynamodbScan = require('DynamoDbScan');
+var DynamoDbScan = require('dynamodb-scan');
 
 
-var dynamodbScan = new DynamodbScan('awsAccessKey', 'awsSecret', 'awsRegion', 'tableName');
+var dynamoDbScan = new DynamoDbScan('awsAccessKey', 'awsSecret', 'awsRegion', 'tableName');
 
 var count = 0;
 
-dynamodbScan.on('data', function(item) {
+dynamoDbScan.on('data', function(item) {
     count++;
     console.dir(item);
 
     if(count === 10)
     {
-        dynamodbScan.pause();
+        dynamoDbScan.pause();
 
         setTimeout(function() {
-            dynamodbScan.resume();
+            dynamoDbScan.resume();
         }, 5000);
     }
 });
 
-dynamodbScan.on('finish', function() {
+dynamoDbScan.on('finish', function() {
     console.info('Finish');
     process.exit(0);
 });
 
-dynamodbScan.start();
+dynamoDbScan.start();
 ```
 
 Parallel Scans are useful to maximize usage of throughput provisioned on the DynamoDb table.
@@ -86,7 +86,7 @@ The author is [Chris Kinsman](https://github.com/chriskinsman) from [PushSpring]
 
   [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/dynamodbscan.svg?style=flat
-[npm-url]: https://npmjs.org/package/dynamodbscan
-[downloads-image]: https://img.shields.io/npm/dm/dynamodbscan.svg?style=flat
-[downloads-url]: https://npmjs.org/package/dynamodbscan
+[npm-image]: https://img.shields.io/npm/v/dynamodb-scan.svg?style=flat
+[npm-url]: https://npmjs.org/package/dynamodb-scan
+[downloads-image]: https://img.shields.io/npm/dm/dynamodb-scan.svg?style=flat
+[downloads-url]: https://npmjs.org/package/dynamodb-scan
