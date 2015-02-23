@@ -1,5 +1,5 @@
 {
-  "name": "DynamoDbScan",
+  "name": "dynamodb-scan",
   "version": "0.0.1",
   "description": "Scans Dynamodb and emits events",
   "main": "index.js",
@@ -8,10 +8,11 @@
   },
   "keywords": [
     "DynamoDb",
-    "EventEmitter"
+    "EventEmitter",
+    "Scan"
   ],
   "author": "Chris Kinsman",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "async": "^0.9.0",
     "aws-sdk": "^2.1.13",
