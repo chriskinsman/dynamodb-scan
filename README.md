@@ -62,9 +62,9 @@ Sets up the AWS credentials to use
 
 __Arguments__
 
-* `awsAccessKeyId` - AWS access key
-* `awsSecretAccessKey` - AWS secret
-* `awsRegion` - AWS region
+* `awsAccessKeyId` - AWS access key if not provided falls back to whatever AWS SDK can find
+* `awsSecretAccessKey` - AWS secret if not provided falls back to whatever AWS SDK can find
+* `awsRegion` - AWS region if not provided falls back to whatever AWS SDK can find
 * `tableName` - Name of table to scan
 * `options` - Options
     - `parallelScans` - Number of parallel scans to run.  Defaults to 1

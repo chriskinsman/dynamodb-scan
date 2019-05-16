@@ -27,7 +27,17 @@ function DynamoDbScan(awsAccessKeyId, awsSecretAccessKey, awsRegion, table, opti
     EventEmitter.call(this);
 
     // Configure dynamoDb
-    AWS.config.update({accessKeyId: _awsAccessKeyId, secretAccessKey: _awsSecretAccessKey, region: _awsRegion});
+    var params = {};
+    if (_awsAccessKeyId) {
+        params.accessKeyId = _awsAccessKeyId;
+    }
+    if (_awsSecretAccessKey) {
+        params.secretAccessKey = _awsSecretAccessKey;
+    }
+    if(_awsRegion) {
+        params.region = _awsRegion;
+    }
+    AWS.config.update(params);
     var dynamodb = new AWS.DynamoDB({maxRetries: _maxRetries});
 
     function scanTable(segment, callback) {
