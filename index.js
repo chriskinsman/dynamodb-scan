@@ -81,8 +81,8 @@ function DynamoDbScan(awsAccessKeyId, awsSecretAccessKey, awsRegion, table, opti
                     return setTimeout(done, 1000);
                 }
             },
-            function() {
-                return query.ExclusiveStartKey;
+            function(done) {
+                setImmediate(done, null, query.ExclusiveStartKey);
             },
             callback
         );
